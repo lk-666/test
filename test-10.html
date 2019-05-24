@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div{color: green}
+        .blue{ color: blue}
+        #header{color: grey}
+    </style>
+</head>
+<body>
+<!--在相同特殊性下，CSS将遵循就近原则，也就是说靠近元素的样式具有最大的选择权，或者说靠在最后的样式具有最大优先权-->
+<div id="header" class="blue" style="color: yellow">内部优先</div>
+</body>
+</html>

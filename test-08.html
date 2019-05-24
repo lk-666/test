@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS选择器的最终样式</title>
+    <style type="text/css">
+        div{
+            margin: 0 auto; /*火狐浏览器居中*/
+            text-align: center; /*IE浏览器居中*/
+        }
+         .Cent{
+             width: 400px;
+             border: 1px dashed #CC0099; /*类别选择器设置边框线*/
+             padding: 10px 15px;/*设置间距*/
+         }
+        #imp{
+            border: 1px dashed #3366FF;/*ID选择器设置边框线*/
+        }
+        .Cent{font-size: 14px;/*类别选择器设置字体大小*/}
+
+        .Cent p{
+            font-size: 16px;
+            font-weight: bold;
+
+        }
+        .Cent .duanluo{
+            font-weight: normal;
+            line-height: 1.5em;
+            text-align: left;
+        }
+        .Cent .duanluo span{
+            color: #009966; /*符合选择器设置字体颜色*/
+        }
+        #imp span{
+            color: #669933;
+            font-weight: bold;
+            font-size: 100px;
+        }
+        span {font-size: 30px;!important; /*span标签使用优先级最高的！important命令*/}
+        span{font-size: 40px;!important;}
+    </style>
+</head>
+<body>
+<div class="Cent" id="imp">
+    <p class="duanluo" id="DL"><span>CSS</span>(Casding style sheet)就是大师的卡拉健康快乐你的撒立刻打开就撒了
+        看见的拉萨科技的撒挥洒的理解撒大家撒泼打视频kid【披萨基督教爱搜ID撒皮拍都塞到【泡的【】撒看
+        快捷酒店经济局登记不好还海带丝行内hi都安居第四ID你弟爱都uadaujdjsaj 加大萨达卷hdhsdjalh的举动活动时间
+        巨大的卡卡的dsadjsa,d'asld'as</p>
+</div>
+</body>
+</html>
