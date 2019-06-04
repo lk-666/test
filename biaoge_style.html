@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设计表格样式</title>
+    <style type="text/css">
+        table{
+            *border-collapse:collapse;/*兼容IE7及以下版本的浏览器*/
+            border-spacing: 0;
+            width: 100%;
+        }
+        .bordered{
+            border: solid #ccc 1px;
+            -moz-border-radius: 6px;/*兼容火狐*/
+            -webkit-border-radius: 6px;/*兼容谷歌、苹果*/
+            border-radius: 6px;
+            -webkit-box-shadow: 0 1px 1px #ccc;
+            -moz-box-shadow: 0 1px 1px #ccc;
+            box-shadow: 0 1px 1px #ccc;
+        }
+        .bordered td,.bordered th{
+            border-left: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        .bordered th{
+            background-color: #dce9f9;
+            background-image: -webkit-gradient(linear,left top,left bottom,from(#ebf3fc),to(#dce9f9));
+            background-image: -webkit-linear-gradient(top,#ebf3fc,#dce9f9);
+            background-image: -moz-linear-gradient(top,#ebf3fc,#dce9f9);
+            background-image: -ms-linear-gradient(top,#ebf3fc,#dce9f9);
+            background-image: -o-linear-gradient(top,#ebf3fc,#dce9f9);
+            background-image: linear-gradient(top,#ebf3fc,#dce9f9);
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ebf3fc,endColorstr=#dce9f9);
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ebf3fc,endColorstr=#dce9f9)";
+            -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+            -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset ;
+            box-shadow:0 1px 0 rgba(255,255,255,.8) inset ;
+            border-top: none;
+            text-shadow: 0 1px 0 rgba(255,255,255,.5);
+        }
+        .bordered th:first-child{
+            -moz-border-radius: 6px 0 0 0 ;
+            -webkit-border-radius: 6px 0 0  0;
+            border-radius: 6px 0 0 0;
+        }
+        .bordered th:last-child{
+            -moz-border-radius:0 6px  0 0 ;
+            -webkit-border-radius:0 6px 0 0;
+            border-radius:0 6px 0 0;
+        }
+        .bordered tr:last-child td:first-child{
+            -moz-border-radius: 0 0 0 6px;
+            -webkit-border-radius: 0 0  0 6px;
+            border-radius: 0 0 0 6px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <table class="bordered">
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>伪类表达式</th>
+            <th>说明</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr><td colspan="3">简单的结构伪类</td></tr>
+        <tr><th>1</th><td>:first-child</td><td>选择某个元素的第一个子元素</td></tr>
+        <tr><th>2</th><td>:last-child</td><td>选择某个元素的最后一个子元素</td></tr>
+        <tr><th>3</th><td>:first-of-type</td><td>选择一个上级元素下的第一个同类子元素(等同于nth-of-type(1))</td></tr>
+        <tr><th>4</th><td>:last-of-type</td><td>选择一个上级元素的最后一个同类子元素(等同于nth-last-of-type(1))</td></tr>
+        <tr><th>5</th><td>:only-child</td><td>选择的元素的是它父级元素的唯一一个子元素</td></tr>
+        <tr><th>6</th><td>:only-of-type</td><td>选择的元素是它上级元素的唯一一个同类型的子元素</td></tr>
+        <tr><th class="end">7</th><td>:empty</td><td>选择的元素里面没有任何内容</td></tr>
+        <tr><td colspan="3">结构伪类元素</td></tr>
+        <tr><th>8</th><td>:nth-child()</td><td>选择某个元素的一个或多个特定的子元素</td></tr>
+        <tr><th>9</th><td>:nth-last-child</td><td>选择某个元素的一个或多个特定的子元素，从这个元素的最后一个元素开始计算</td></tr>
+        <tr><th>10</th><td>:nth-of-type</td><td>选择指定的元素</td></tr>
+        <tr><th class="end">11</th><td>:nth-last-of-type</td><td>选择指定的元素，从元素的最后一个开始计算</td></tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
