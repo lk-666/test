@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="" type="text/css">
+    <meta charset="UTF-8">
+    <title>设计表单样式表</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0/*通过通配选择器清除页面中所有标签的内边距*/}
+        body{
+            font-family: Georgia, Serif, serif;
+            background: url("") center -50px no-repeat #c4c4c4;
+            color: #3a3a3a;/*定义清除样式类，以便控制页面中每个表单域的换行显示*/}
+        form{
+            width: 406px;
+            margin: 120px auto 0;/*水平居中*/
+        }
+        legend{display: none}
+        filedset{border: 0}
+        label{
+            width: 115px;
+            text-align: right;
+            float: left;
+            margin: 0 10px 0 0;
+            padding:  9px 0 0 0;
+            font-size: 16px;
+        }
+        input{
+            width: 220px;
+            display: block;
+            padding: 4px;
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            color: #3a3a3a;
+            font-family: Georgia,Serif,serif;
+        }
+        input[type=checkbox]{
+            width: 20px;
+            margin: 0;
+            display: inline-block;/*通过属性选择器设置复选框的样式*/
+        }
+        .button{
+            background: url("") repeat-x top center;
+            border: 1px solid #999;
+            -moz-border-radius: 5px;/*兼容火狐浏览器*/
+            padding: 5px;
+            color: black;
+            font-weight: bold;
+            -webkit-border-radius: 5px;/*兼容苹果、谷歌浏览器*/
+            font-size: 13px;
+            width: 70px;
+        }
+        .button:hover{
+            background: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<form action="#" id="login-form" method="post">
+    <filedset>
+        <legend>登录</legend>
+    <label for="login">Email</label>
+    <input type="text" id="login" name="login">
+
+    <div class="clear"></div>
+
+    <label for="password">密码</label>
+    <input type="password" id="password" name="password">
+
+    <div class="clear"></div>
+
+    <label for="remember_me" style="padding: 0">记住状态?</label>
+    <input type="checkbox" id="remember_me" style="position: relative;top: 3px; margin: 0;" name="remember_me" >
+
+    <div class="clear"></div>
+
+    <br>
+    <input type="submit" style="margin: -20px 0 0 287px" class="button" name="commit" value="登 录">
+    </filedset>
+</form>
+<p align="center"><strong>&copy;www.cool.cn</strong></p>
+</body>
+</html>
