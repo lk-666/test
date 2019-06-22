@@ -6,12 +6,16 @@
     <style type="text/css">
         .box1{
             box-shadow:-5px 5px 10px green;/*表示右外边框、下外边框+阴影范围大小为10px*/
+                           /*左右、上下边框阴影
+                           加负号标识相反方向
+                           其中:inset表示内部阴影
+                           默认阴影在边框外*/
             width:300px;
             height:80px;
-            margin:0 auto;  /*左右、上下边框阴影
-                            加负号标识相反方向
-                            其中:inset表示内部阴影
-                            默认阴影在边框外*/
+            margin:0 auto;
+            border: 1px dotted #0000FF;/*dashed:定义虚线边框*/
+                                       /*dotted:定义点线边框*/
+
         }
     </style>
 </head>
