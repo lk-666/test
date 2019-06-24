@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动实现导航栏</title>
+    <style type="text/css">
+        .wrap{
+            width: 960px;
+            height: 40px;
+            margin: 0 auto;
+            background-color: #55a8ea;
+        }
+        .wrap ul{
+            margin: 0;
+            padding: 0;
+        }
+        .wrap ul li{
+            list-style: none;
+            float: left;
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+        }
+        .wrap ul li a{
+            display: block;
+            text-decoration: none;
+            height: 40px;
+            margin: 0 auto;
+            font: 14px/40px "Microsoft YaHei UI";
+            color: #fff;
+            text-align: center;
+        }
+        .active{
+            background-color: #00619f;
+        }
+        .wrap li:hover{
+            background-color: #00619f;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <ul>
+        <li class="active"><a href="">首页</a></li>
+        <li><a href="">网站建设</a></li>
+        <li><a href="">程序开发</a></li>
+        <li><a href="">网络营销</a></li>
+        <li><a href="">企业VI</a></li>
+        <li><a href="">案例展示</a></li>
+        <li><a href="">联系我们</a></li>
+    </ul>
+</div>
+</body>
+</html>
