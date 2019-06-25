@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Type-07</title>
+    <style type="text/css">
+        .spinner {
+            width: 100px;
+            height: 100px;
+            margin: 100px auto;
+            background-color: #333;
+            border-radius: 100%;
+            -webkit-animation: scaleout 1.0s infinite ease-in-out;
+            animation: scaleout 1.0s infinite ease-in-out;
+        }
+
+        @-webkit-keyframes scaleout {/*以百分比来规定动画改变的时间*/
+            0% { -webkit-transform: scale(0.0) }
+            /*scale用于对元素进行缩放*/
+            /*rotate指定元素的2D旋转*/
+            /*translate用于元素的移动*/
+            /*skew用于元素的扭曲*/
+            100% {
+                -webkit-transform: scale(1.0);
+                opacity: 1;/*透明度*/
+            }
+        }
+        @keyframes scaleout {/*创建动画scaleout*/
+            0% {
+                transform: scale(0.0);/*transform用于元素的变形*/
+                -webkit-transform: scale(0.0);
+            }
+        100% {
+                  transform: scale(1.0);
+                  -webkit-transform: scale(1.0);
+                  opacity:1;
+              }
+        }
+
+    </style>
+</head>
+<body>
+<div class="spinner"></div>
+</body>
+</html>
