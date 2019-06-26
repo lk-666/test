@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>动画效果</title>
+    <style>
+        div
+        {
+            width:100px;
+            height:100px;
+            background:red;
+            position:relative;
+            animation:mymove 5s infinite;/*简写形式：name|duration|timing-function*/
+            -webkit-animation:mymove 5s infinite; /*兼容谷歌 and 苹果浏览器*/
+            /*animation-name: ;
+            animation-duration: ;
+            animation-timing-function: ;
+            animation-delay: ;
+            animation-iteration-count: ;
+            animation-direction: ;
+            animation-fill-mode: ;*/
+        }
+        @keyframes mymove
+        {
+            from {left:0px;}
+            to {left:200px;}
+        }
+       @-webkit-keyframes mymove {/*兼容谷歌 and 苹果浏览器*/
+           from {left:0px;}
+           to {left:200px;}
+       }
+    </style>
+</head>
+<body>
+<div></div>
+<p>animation语法:animation-name(动画名称)|animation-duration(动画持续时间)|animation-timing-function(设置动画将如何完成一个周期)|animation-delay(设置动画在启动前的延迟)|animation-iteration-count(定义动画的播放次数)| animation-direction(规定动画是否轮流反向播放)</p>
+</body>
+</html>
